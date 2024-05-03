@@ -122,7 +122,6 @@ def ipid_monitoring(m_instances):
 
 
 ### main ###
-# python3 sniffer.py <ips file> <config path> <iface>
 if __name__ == "__main__":    
     source_ips_file = sys.argv[1]
     configs_path = sys.argv[2]
@@ -152,9 +151,3 @@ if __name__ == "__main__":
     alarm("[*] Start IP-ID Monitoring ...")
     sniff(offline=monitoring_file,filter="ip",prn=ipid_monitoring(instances_))
     #sniff(iface=["enp2s0","enp3s0"],filter="ip",prn=ipid_monitoring(instances_))
-
-    # EPIC:         python3 sniffer.py /Users/sabrina/Nextcloud/ipid/network_trace_data/EPIC/traces/src_ips.txt /Users/sabrina/Nextcloud/ipid/network_trace_data/EPIC/traces/configs/ /Users/sabrina/Nextcloud/ipid/network_trace_data/EPIC/traces/monitoring.pcapng
-    # MODBUS SCADA: python3 sniffer.py /Users/sabrina/Nextcloud/ipid/network_trace_data/MODBUS_SCADA/traces/src_ips.txt /Users/sabrina/Nextcloud/ipid/network_trace_data/MODBUS_SCADA/traces/configs/ /Users/sabrina/Nextcloud/ipid/network_trace_data/MODBUS_SCADA/traces/monitoring.pcap
-    # QUT_DNP3:     python3 sniffer.py /Users/sabrina/Nextcloud/ipid/network_trace_data/QUT_DNP3/traces/slave/src_ips.txt /Users/sabrina/Nextcloud/ipid/network_trace_data/QUT_DNP3/traces/slave/configs/ /Users/sabrina/Nextcloud/ipid/network_trace_data/QUT_DNP3/traces/slave/replay.pcap
-    # QUT_S7Comm:   python3 sniffer.py /Users/sabrina/Nextcloud/ipid/network_trace_data/QUT_S7Comm/traces/src_ips.txt /Users/sabrina/Nextcloud/ipid/network_trace_data/QUT_S7Comm/traces/configs/ /Users/sabrina/Nextcloud/ipid/network_trace_data/QUT_S7Comm/traces/monitoring.pcap
-    # SWaT:         python3 sniffer.py /Users/sabrina/Nextcloud/ipid/network_trace_data/SWaT/traces/src_ips.txt /Users/sabrina/Nextcloud/ipid/network_trace_data/SWaT/traces/configs/ /Users/sabrina/Nextcloud/ipid/network_trace_data/SWaT/traces/monitoring.pcap
