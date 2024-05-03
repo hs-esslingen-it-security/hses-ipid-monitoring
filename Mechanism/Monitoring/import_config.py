@@ -90,8 +90,7 @@ def load_config(config_file_name):
 
 
 if TEST_FLAG:
-    src, assignment_type, config = load_config('/Users/sabrina/Documents/ip-id-monitoring/SPLC.json')
-    #config = load_config('/Users/sabrina/Documents/ip-id-monitoring/PCN4.json')
+    src, assignment_type, config = load_config('test')
 
     print(assignment_type)
     for k, v in config.items():
