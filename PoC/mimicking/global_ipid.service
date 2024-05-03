@@ -4,7 +4,7 @@ After=multi-user.target
 
 [Service]
 Type=idle
-ExecStart=/usr/bin/python3 /home/ubuntu/ipid-mimicking/set_global_ipid.py
+ExecStart=/usr/bin/python3 ../ipid-mimicking/set_global_ipid.py
 Restart=always
 
 [Install]
