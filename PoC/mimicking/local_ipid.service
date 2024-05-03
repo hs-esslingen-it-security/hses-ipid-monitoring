@@ -1,0 +1,11 @@
+[Unit]
+Description=service to alter IP ID via iptables and NFQUEUE (set local IP IDs)
+After=multi-user.target
+
+[Service]
+Type=idle
+ExecStart=/usr/bin/python3 /home/ubuntu/ipid-mimicking/set_local_ipid.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

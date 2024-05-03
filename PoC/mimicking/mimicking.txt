@@ -1,0 +1,37 @@
+Necessary services/commands to start mimicking of a global or local (per-stream) IP-ID counter:
+1) add the necessary services/scripts:
+    - set_global_ipid.py
+    - set_local_ipid.py
+    - global_ipid.service (in /etc/systemd/system/)
+    - local_ipid.service (in /etc/systemd/system/)
+
+    [Unit]
+    Description=service to alter IP-ID via iptables and NFQUEUE (set <global/local> IP-ID)
+    After=multi-user.target
+
+    [Service]
+    Type=idle
+    ExecStart=/usr/bin/python3 </.../set_global_ipid.py>
+    Restart=always
+
+    [Install]
+    WantedBy=multi-user.target
+
+
+2) start the systemctl services:
+    sudo systemctl status/start/stop global_ipid.service /local_ipid.service>
+    sudo systemctl enable/disable <global_ipid.service/local_ipid.service>          # to start with boot
+
+
+3) add the necessary iptables-OUTPUT rule to pass each outgoing packet to NFQUEUE and alter the IP-ID 
+    GLOBAL IP-ID MONITORING: --queue-num 1
+    sudo iptables -I OUTPUT 1 -o <br0/eth0/enp2s0/...> -j NFQUEUE --queue-num 1
+
+    LOCAL/PER-STREAM IP-ID MONITORING:  --queue-num 2
+    sudo iptables -I OUTPUT 1 -o <br0/eth0/enp2s0/...> -j NFQUEUE --queue-num 2
+
+    To delete rule:
+    sudo iptables -D OUTPUT -o <br0/eth0/enp2s0/...> -j NFQUEUE --queue-num <1/2>
+
+
+

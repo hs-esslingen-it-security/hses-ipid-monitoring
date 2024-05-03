@@ -1,0 +1,21 @@
+analyzing IP-ID behavior for 192.168.1.10 using /Users/sabrina/Nextcloud/ipid/PoC/traffic_captures/global-classification-without-spoofing/captures/192.168.1.10.pcap ... 
+                           stdev        mean      min    max   mode    size
+0                       0.000000    1.000000 -65535.0    1.0    1.0  100000
+17                     15.382017  118.450957 -65400.0  149.0  111.0     844
+6                       0.059519    1.003555 -65535.0    2.0    1.0   99156
+(17, 192.168.200.201)  15.382017  118.450957 -65400.0  149.0  111.0     844
+(6, 192.168.200.201)    0.059519    1.003555 -65535.0    2.0    1.0   99156
+global behavior
+{"src": "192.168.1.10", "type": "global", "counter": {"increment": 1, "wrap_around": 65535, "byte_swapped": false, "max_gap": 1}}
+WARNING: No IPv4 address found on anpi2 !
+WARNING: No IPv4 address found on anpi0 !
+WARNING: more No IPv4 address found on anpi1 !
+analyzing IP-ID behavior for 192.168.200.201 using /Users/sabrina/Nextcloud/ipid/PoC/traffic_captures/global-classification-without-spoofing/captures/192.168.200.201.pcap ... 
+                        stdev        mean      min    max   mode    size
+0                    0.161844    1.010465 -65535.0    6.0    1.0  100000
+17                  16.074060  122.659091 -65431.0  156.0  116.0     844
+6                    0.188842    1.019223 -65535.0    7.0    1.0   99156
+(17, 192.168.1.10)  16.074060  122.659091 -65431.0  156.0  116.0     844
+(6, 192.168.1.10)    0.188842    1.019223 -65535.0    7.0    1.0   99156
+global behavior
+{"src": "192.168.200.201", "type": "global", "counter": {"increment": 1, "wrap_around": 65535, "byte_swapped": false, "max_gap": 6}}

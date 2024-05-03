@@ -1,0 +1,1 @@
+{"src": "192.168.1.10", "type": "global", "counter": {"increment": 1, "wrap_around": 65535, "byte_swapped": false, "max_gap": 1}}

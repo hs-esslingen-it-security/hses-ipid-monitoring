@@ -1,0 +1,25 @@
+analyzing IP-ID behavior for 192.168.1.10 using /Users/sabrina/Nextcloud/ipid/PoC/traffic_captures/per-stream-classification-without-spoofing/captures/192.168.1.10.pcap ... 
+                            stdev      mean      min      max  mode    size
+0                      487.126298  0.894253 -65535.0  38735.0   1.0  100000
+17                       0.000000  1.000000      0.0      1.0   1.0     847
+6                        0.000000  1.000000 -65535.0      1.0   1.0   99153
+(17, 192.168.200.201)    0.000000  1.000000      0.0      1.0   1.0     847
+(6, 192.168.200.201)     0.000000  1.000000 -65535.0      1.0   1.0   99153
+per-protocol/stream behavior
+defined streams: [('17', '192.168.200.201'), ('6', '192.168.200.201')]
+undefined streams: []
+{"src": "192.168.1.10", "type": "stream", "counter": [{"protocol": "17", "dst": "192.168.200.201", "increment": 1, "wrap_around": 65535, "max_gap": 1, "byte_swapped": false}, {"protocol": "6", "dst": "192.168.200.201", "increment": 1, "wrap_around": 65535, "max_gap": 1, "byte_swapped": false}]}
+WARNING: No IPv4 address found on anpi2 !
+WARNING: No IPv4 address found on anpi0 !
+WARNING: more No IPv4 address found on anpi1 !
+analyzing IP-ID behavior for 192.168.200.201 using /Users/sabrina/Nextcloud/ipid/PoC/traffic_captures/per-stream-classification-without-spoofing/captures/192.168.200.201.pcap ... 
+                         stdev      mean      min      max  mode    size
+0                   485.846282  0.894131 -65535.0  36563.0   1.0  100000
+17                    0.000000  1.000000      0.0      1.0   1.0     847
+6                     0.000000  1.000000 -65535.0      1.0   1.0   99153
+(17, 192.168.1.10)    0.000000  1.000000      0.0      1.0   1.0     847
+(6, 192.168.1.10)     0.000000  1.000000 -65535.0      1.0   1.0   99153
+per-protocol/stream behavior
+defined streams: [('17', '192.168.1.10'), ('6', '192.168.1.10')]
+undefined streams: []
+{"src": "192.168.200.201", "type": "stream", "counter": [{"protocol": "17", "dst": "192.168.1.10", "increment": 1, "wrap_around": 65535, "max_gap": 1, "byte_swapped": false}, {"protocol": "6", "dst": "192.168.1.10", "increment": 1, "wrap_around": 65535, "max_gap": 1, "byte_swapped": false}]}
