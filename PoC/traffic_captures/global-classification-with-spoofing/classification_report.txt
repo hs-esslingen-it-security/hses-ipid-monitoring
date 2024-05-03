@@ -1,4 +1,4 @@
-analyzing IP-ID behavior for 192.168.1.10 using /Users/sabrina/Nextcloud/ipid/PoC/traffic_captures/global-classification-with-spoofing/captures/192.168.1.10.pcap ... 
+analyzing IP-ID behavior for 192.168.1.10 
                             stdev        mean      min      max   mode   size
 0                      489.526982    0.649067 -65535.0  65507.0    1.0  99997
 17                      15.850613  120.876999 -65407.0    150.0  143.0    821
@@ -9,10 +9,8 @@ per-protocol/stream behavior
 defined streams: [('17', '192.168.200.201')]
 undefined streams: []
 {"src": "192.168.1.10", "type": "stream", "counter": [{"protocol": "17", "dst": "192.168.200.201", "increment": 143, "wrap_around": 65535, "max_gap": 150, "byte_swapped": false}]}
-WARNING: No IPv4 address found on anpi2 !
-WARNING: No IPv4 address found on anpi0 !
-WARNING: more No IPv4 address found on anpi1 !
-analyzing IP-ID behavior for 192.168.200.201 using /Users/sabrina/Nextcloud/ipid/PoC/traffic_captures/global-classification-with-spoofing/captures/192.168.200.201.pcap ... 
+
+analyzing IP-ID behavior for 192.168.200.201 
                          stdev        mean      min      max   mode    size
 0                   389.959911    0.786653 -65535.0  65475.0    1.0  100003
 17                   16.595260  124.971710 -65425.0    159.0  148.0     821
